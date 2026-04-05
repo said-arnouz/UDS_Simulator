@@ -25,15 +25,15 @@ def main():
     )
 
     # -- Login
-    login = LoginWindow(db)
-    if login.exec_() != QDialog.Accepted:
-        sys.exit(0)
+    #login = LoginWindow(db)
+    #if login.exec_() != QDialog.Accepted:
+        #sys.exit(0)
 
-    role = login.logged_role
-    #role = "admin"
+    #role = login.logged_role
+    role = "admin"
     # -- Init ECU + Client
-    ecu    = ECUSimulator(db=db, role=role)
-    client = UDSClient(ecu=ecu)
+    ecu    = ECUSimulator(db=db, role=role) # ECUSimulator instantiated
+    client = UDSClient(ecu=ecu)  # ecu object passed into constructor
 
     # -- Main window
     window = MainWindow(client=client, ecu=ecu, role=role)

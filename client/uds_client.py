@@ -80,7 +80,8 @@ class UDSClient:
         self._log(CLIENT_ADDR, request_frame, "Client(DiagBox)")
 
         # 3. Sift l ECU — direct call
-        response_frame = self.ecu.process_request(request_frame)
+        # self.ecu is a reference pointing to the ECUSimulator object in memory
+        response_frame = self.ecu.process_request(request_frame) 
 
         # 4. Parse response
         try:

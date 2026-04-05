@@ -3,6 +3,7 @@
 > Pure software UDS diagnostic simulator built with Python & PyQt5.  
 > Simulates an ECU responding to diagnostic requests with real-time frame tracing.
 
+![SIGMA Logo](logo/1.PNG)
 ---
 
 ## Installation
@@ -65,10 +66,7 @@ pip install PyQt5
 | `0xF186` | Active Session | uint8 | ✓ | ✗ | All |
 | `0xF187` | SW Version | string | ✓ | ✗ | All |
 | `0xF193` | HW Version | string | ✓ | ✗ | All |
-| `0x0101` | Odometer | uint32 | ✓ | ✗ | All |
-| `0x0102` | Fuel Level | uint8 | ✓ | ✗ | All |
-| `0x0200` | Max Speed Limit | uint8 | ✓ | ✓ | Admin, Tech |
-| `0x0201` | ECU Debug Mode | uint8 | ✓ | ✓ | Admin |
+
 
 ---
 
